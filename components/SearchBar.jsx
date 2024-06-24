@@ -15,7 +15,7 @@ const SearchBar = () => {
     try {
       const data = await searchBooks(query);
       setBooks(data.items);
-      setShowSearchResults(true); // Show search results after fetching data
+      setShowSearchResults(true);
     } catch (error) {
       console.error("Error searching books:", error);
     }
@@ -25,7 +25,7 @@ const SearchBar = () => {
     const inputValue = e.target.value;
     setQuery(inputValue);
     if (inputValue.trim() === "") {
-      setShowSearchResults(false); // Hide search results only if input is empty
+      setShowSearchResults(false);
     }
   };
 
@@ -37,7 +37,7 @@ const SearchBar = () => {
           value={query}
           onChange={handleInputChange}
           placeholder="Search for books"
-          className="bg-slate-100 w-80 pl-7 p-3 rounded-l-full text-lg outline-none"
+          className="bg-slate-100 w-64 pl-7 p-3 rounded-l-full text-lg outline-none"
         />
         <button
           onClick={handleSearch}
@@ -49,7 +49,7 @@ const SearchBar = () => {
 
       {!showSearchResults && <PopularBooks />}
 
-      {/* {showSearchResults && (
+      {showSearchResults && (
         <div className="grid relative lg:grid-cols-3 md:grid-cols-2 gap-10 mt-8">
           {books.map((book) => (
             <div
@@ -65,7 +65,7 @@ const SearchBar = () => {
                 />
               ) : (
                 <img
-                  src={img} // assuming img is defined
+                  src={img}
                   alt={book.volumeInfo.title}
                   className="w-full h-full object-cover"
                 />
@@ -87,7 +87,7 @@ const SearchBar = () => {
             </div>
           ))}
         </div>
-      )} */}
+      )}
     </div>
   );
 };
