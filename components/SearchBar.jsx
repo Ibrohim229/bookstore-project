@@ -37,7 +37,7 @@ const SearchBar = () => {
           value={query}
           onChange={handleInputChange}
           placeholder="Search for books"
-          className="bg-slate-100 w-64 pl-7 p-3 rounded-l-full text-lg outline-none"
+          className="bg-slate-100 w-72 pl-7 p-3 rounded-l-full text-lg outline-none"
         />
         <button
           onClick={handleSearch}
