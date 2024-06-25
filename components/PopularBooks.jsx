@@ -3,10 +3,10 @@ import React from "react";
 
 const PopularBooks = () => {
   return (
-    <div className="flex flex-col gap-3 ml-8">
-      <h1 className=" text-2xl font-Poppins font-bold">Popular Books</h1>
+    <div className="flex flex-col gap-3 ml-8 mr-8">
+      <h1 className=" text-[22px] font-Poppins font-bold">Popular Books</h1>
       <div
-        className="flex gap-6 overflow-x-auto "
+        className="flex gap-8 overflow-x-auto"
         style={{ scrollbarWidth: "none", WebkitScrollbarWidth: "none" }}
       >
         {sampleBooks.map((book) => (
