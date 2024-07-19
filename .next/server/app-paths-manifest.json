@@ -1,7 +1,1 @@
-{
-  "/_not-found/page": "app/_not-found/page.js",
-  "/(root)/(home)/page": "app/(root)/(home)/page.js",
-  "/(root)/(home)/saved/page": "app/(root)/(home)/saved/page.js",
-  "/(root)/(home)/profile/page": "app/(root)/(home)/profile/page.js",
-  "/(root)/(home)/cart/page": "app/(root)/(home)/cart/page.js"
-}
+{}
