@@ -2,7 +2,6 @@
 import React from "react";
 import { searchBooks } from "../data/booksAPI";
 import { img } from "../data/img.jpg";
-import Image from "next/image";
 import { useState } from "react";
 import { CiSearch } from "react-icons/ci";
 import PopularBooks from "./PopularBooks";
@@ -59,13 +58,13 @@ const SearchBar = () => {
             >
               {book.volumeInfo.imageLinks &&
               book.volumeInfo.imageLinks.thumbnail ? (
-                <Image
+                <img
                   src={book.volumeInfo.imageLinks.thumbnail}
                   alt={book.volumeInfo.title}
                   className="border-b-[1px] border-black w-full h-full object-cover"
                 />
               ) : (
-                <Image
+                <img
                   src={img}
                   alt={book.volumeInfo.title}
                   className="w-full h-full object-cover"

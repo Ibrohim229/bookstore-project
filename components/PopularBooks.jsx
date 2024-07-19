@@ -1,4 +1,4 @@
-import { sampleBooks } from "@/data/sampleBooks";
+import { sampleBooks } from "../data/sampleBooks";
 import React from "react";
 
 const PopularBooks = () => {
