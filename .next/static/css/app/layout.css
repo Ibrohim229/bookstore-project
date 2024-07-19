@@ -523,17 +523,23 @@ video {
 .right-7{
   right: 1.75rem;
 }
+.bottom-0{
+  bottom: 0px;
+}
+.right-0{
+  right: 0px;
+}
 .z-10{
   z-index: 10;
 }
 .ml-8{
   margin-left: 2rem;
 }
-.mt-8{
-  margin-top: 2rem;
-}
 .mr-8{
   margin-right: 2rem;
+}
+.mt-8{
+  margin-top: 2rem;
 }
 .line-clamp-2{
   overflow: hidden;
@@ -556,11 +562,17 @@ video {
 .h-full{
   height: 100%;
 }
+.min-h-screen{
+  min-height: 100vh;
+}
 .w-16{
   width: 4rem;
 }
 .w-72{
   width: 18rem;
+}
+.w-\[300px\]{
+  width: 300px;
 }
 .w-full{
   width: 100%;
@@ -598,17 +610,14 @@ video {
 .gap-4{
   gap: 1rem;
 }
-.gap-6{
-  gap: 1.5rem;
-}
 .gap-8{
   gap: 2rem;
 }
+.overflow-auto{
+  overflow: auto;
+}
 .overflow-hidden{
   overflow: hidden;
-}
-.overflow-x-auto{
-  overflow-x: auto;
 }
 .rounded-3xl{
   border-radius: 1.5rem;
@@ -627,6 +636,9 @@ video {
 .border-b-\[1px\]{
   border-bottom-width: 1px;
 }
+.border-t{
+  border-top-width: 1px;
+}
 .border-black{
   --tw-border-opacity: 1;
   border-color: rgb(0 0 0 / var(--tw-border-opacity));
@@ -639,6 +651,10 @@ video {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
+.bg-slate-500{
+  --tw-bg-opacity: 1;
+  background-color: rgb(100 116 139 / var(--tw-bg-opacity));
+}
 .object-cover{
   object-fit: cover;
 }
@@ -648,9 +664,32 @@ video {
 .p-4{
   padding: 1rem;
 }
+.p-32{
+  padding: 8rem;
+}
+.p-10{
+  padding: 2.5rem;
+}
+.p-8{
+  padding: 2rem;
+}
+.p-5{
+  padding: 1.25rem;
+}
+.p-6{
+  padding: 1.5rem;
+}
 .px-10{
   padding-left: 2.5rem;
   padding-right: 2.5rem;
+}
+.px-6{
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+.px-5{
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
 }
 .pl-7{
   padding-left: 1.75rem;
@@ -658,15 +697,20 @@ video {
 .pt-10{
   padding-top: 2.5rem;
 }
+.pb-6{
+  padding-bottom: 1.5rem;
+}
+.pt-28{
+  padding-top: 7rem;
+}
 .font-Poppins{
   font-family: Poppins, serif;
 }
 .font-sans{
   font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
-.text-2xl{
-  font-size: 1.5rem;
-  line-height: 2rem;
+.text-\[22px\]{
+  font-size: 22px;
 }
 .text-lg{
   font-size: 1.125rem;
@@ -675,9 +719,6 @@ video {
 .text-xl{
   font-size: 1.25rem;
   line-height: 1.75rem;
-}
-.text-\[22px\]{
-  font-size: 22px;
 }
 .font-bold{
   font-weight: 700;
@@ -697,14 +738,22 @@ video {
   --tw-shadow-colored: 0 25px 50px -12px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
-.shadow-sm{
-  --tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-  --tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-}
 .outline-none{
   outline: 2px solid transparent;
   outline-offset: 2px;
+}
+@media not all and (min-width: 768px){
+
+  .max-md\:pb-14{
+    padding-bottom: 3.5rem;
+  }
+}
+@media (min-width: 640px){
+
+  .sm\:px-14{
+    padding-left: 3.5rem;
+    padding-right: 3.5rem;
+  }
 }
 @media (min-width: 768px){
 

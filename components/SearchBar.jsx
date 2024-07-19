@@ -2,6 +2,7 @@
 import React from "react";
 import { searchBooks } from "../data/booksAPI";
 import { img } from "../data/img.jpg";
+import Image from "next/image";
 import { useState } from "react";
 import { CiSearch } from "react-icons/ci";
 import PopularBooks from "./PopularBooks";
@@ -30,7 +31,7 @@ const SearchBar = () => {
   };
 
   return (
-    <div className="flex flex-col pt-10 gap-4">
+    <div className="flex flex-col gap-4">
       <div className="flex justify-center">
         <input
           type="text"
@@ -58,13 +59,13 @@ const SearchBar = () => {
             >
               {book.volumeInfo.imageLinks &&
               book.volumeInfo.imageLinks.thumbnail ? (
-                <img
+                <Image
                   src={book.volumeInfo.imageLinks.thumbnail}
                   alt={book.volumeInfo.title}
                   className="border-b-[1px] border-black w-full h-full object-cover"
                 />
               ) : (
-                <img
+                <Image
                   src={img}
                   alt={book.volumeInfo.title}
                   className="w-full h-full object-cover"
