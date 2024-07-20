@@ -50,37 +50,40 @@ const SearchBar = () => {
       {!showSearchResults && <PopularBooks />}
 
       {showSearchResults && (
-        <div className="grid relative lg:grid-cols-3 md:grid-cols-2 gap-10 mt-8">
+        <div className="sm:grid flex flex-col lg:grid-cols-3 md:grid-cols-2 gap-6 pt-5 ">
           {books.map((book) => (
-            <div
-              key={book.id}
-              className="flex flex-col lg:w-80 md:w-72 justify-between border border-black rounded-3xl overflow-hidden"
-            >
+            <div key={book.id} className="flex shadow-lg rounded-3xl">
               {book.volumeInfo.imageLinks &&
               book.volumeInfo.imageLinks.thumbnail ? (
                 <img
                   src={book.volumeInfo.imageLinks.thumbnail}
                   alt={book.volumeInfo.title}
-                  className="border-b-[1px] border-black w-full h-full object-cover"
+                  className="min-w-20 min-h-20 flex-shrink-0 rounded-l-3xl"
                 />
               ) : (
                 <img
                   src={img}
                   alt={book.volumeInfo.title}
-                  className="w-full h-full object-cover"
+                  className="min-w-20 min-h-20 flex-shrink-0 object-cover"
                 />
               )}
 
-              <div className="p-4 flex flex-col gap-10 items-start">
-                <h2 className="font-bold text-lg font-sans">
+              <div className="p-4 flex flex-col gap-7">
+                <h2 className="font-bold text-xl font-sans">
                   {book.volumeInfo.title}
                 </h2>
-                <div className="flex flex-col">
+                <div className="flex flex-col text-sm">
                   {book.volumeInfo.authors && (
-                    <p>Author: {book.volumeInfo.authors.join(", ")}</p>
+                    <p>
+                      <span className="font-semibold">Author:</span>{" "}
+                      {book.volumeInfo.authors.join(", ")}
+                    </p>
                   )}
                   {book.volumeInfo.publishedDate && (
-                    <p>Published Date: {book.volumeInfo.publishedDate}</p>
+                    <p>
+                      <span className="font-semibold">Published Date:</span>{" "}
+                      {book.volumeInfo.publishedDate}
+                    </p>
                   )}
                 </div>
               </div>

@@ -10,7 +10,7 @@ import { usePathname } from "next/navigation";
 const Navbar = () => {
   const pathName = usePathname();
   return (
-    <div className="z-10 flex justify-between px-5 fixed right-0 left-0 bottom-0 bg-white shadow-2xl h-20 items-center border border-t">
+    <div className="z-10 flex justify-between px-7 fixed right-0 left-0 bottom-0 bg-white shadow-2xl h-20 items-center border border-t">
       <Link href="/" className=" flex justify-center items-center">
         <GoHome size={35} color={`${pathName === "/" ? "blue" : "black"}`} />
       </Link>
